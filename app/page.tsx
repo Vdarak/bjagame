@@ -808,7 +808,7 @@ export default function BlackjackGame() {
               <Button
                 variant="outline"
                 onClick={() => setShowStrategyPanel(!showStrategyPanel)}
-                className="hidden lg:inline-flex bg-slate-700/50 border-slate-600 hover:bg-slate-700"
+                className="hidden lg:inline-flex bg-slate-800 text-white border-slate-600 hover:bg-slate-700 hover:text-white font-semibold"
               >
                 <BookOpen className="mr-2 h-4 w-4" />
                 Strategy
