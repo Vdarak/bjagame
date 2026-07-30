@@ -47,7 +47,7 @@ export default function BlackjackTable({ children }: BlackjackTableProps) {
         <div className="absolute top-[25%] left-1/2 -translate-x-1/2 w-[60%] h-[30%] text-center">
           <CurvedText
             text="BLACKJACK PAYS 3 TO 2"
-            arc={60}
+            arc={70}
             radius={250}
             className="text-yellow-300/80 font-bold text-sm md:text-lg uppercase tracking-widest"
           />
@@ -55,7 +55,7 @@ export default function BlackjackTable({ children }: BlackjackTableProps) {
         <div className="absolute top-[35%] left-1/2 -translate-x-1/2 w-[85%] h-[40%] text-center">
           <CurvedText
             text="DEALER MUST HIT ON SOFT 17 • INSURANCE PAYS 2 TO 1"
-            arc={80}
+            arc={110}
             radius={320}
             className="text-white/80 font-semibold text-xs md:text-base"
           />
