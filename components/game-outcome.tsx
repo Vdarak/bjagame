@@ -127,7 +127,7 @@ export default function GameOutcome({ outcome, onClose, displayMode = "modal" }:
               }),
             }}
             exit={{ opacity: 0, y: 50, scale: 0.3 }}
-            className={`fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 p-3 rounded-lg shadow-xl text-white text-base font-semibold ${getBgColor()} ${
+            className={`fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 p-3 rounded-lg shadow-xl text-white text-base font-semibold text-center flex items-center justify-center ${getBgColor()} ${
               outcome.type === "blackjack" || outcome.type === "dealer_blackjack"
                 ? "px-5 py-3 text-lg border-2 border-white/50" // Larger and bordered for blackjacks
                 : "text-sm"

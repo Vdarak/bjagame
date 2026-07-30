@@ -41,7 +41,7 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
       animate={{ opacity: 1, scale: 1 }}
       className="fixed inset-0 bg-green-800 flex items-center justify-center z-50 p-4"
     >
-      <Card className="w-full max-w-md bg-green-700 text-white border-2 border-yellow-500">
+      <Card className="w-full max-w-md bg-green-700 text-white border-2 border-yellow-500 overflow-hidden">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl">Welcome to Blackjack!</CardTitle>
           <CardDescription className="text-green-200">

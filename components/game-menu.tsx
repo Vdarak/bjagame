@@ -31,7 +31,7 @@ export default function GameMenu({ isOpen, onClose, onNewGame, onMainMenu, gameS
             className="w-full max-w-md"
             onClick={(e) => e.stopPropagation()}
           >
-            <Card className="bg-green-700 text-white border-2 border-yellow-500">
+            <Card className="bg-green-700 text-white border-2 border-yellow-500 overflow-hidden">
               <CardHeader className="bg-green-800 flex flex-row items-center justify-between">
                 <CardTitle>Game Menu</CardTitle>
                 <Button variant="ghost" size="sm" onClick={onClose} className="text-white hover:bg-green-600">

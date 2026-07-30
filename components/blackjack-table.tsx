@@ -20,10 +20,10 @@ const CurvedText = ({
       {characters.map((char, i) => (
         <span
           key={i}
-          className={`absolute h-full origin-bottom ${className}`}
+          className={`absolute left-1/2 -translate-x-1/2 ${className}`}
           style={{
-            transform: `rotate(${i * degree - arc / 2}deg)`,
-            transformOrigin: `0 ${radius}px`,
+            transform: `translateX(-50%) rotate(${i * degree - arc / 2}deg)`,
+            transformOrigin: `center ${radius}px`,
             height: `${radius}px`,
           }}
         >

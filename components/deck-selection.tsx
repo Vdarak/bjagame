@@ -15,7 +15,7 @@ export default function DeckSelection({ onSelectDecks }: DeckSelectionProps) {
       animate={{ opacity: 1, scale: 1 }}
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
     >
-      <Card className="w-full max-w-md bg-green-700 text-white border-2 border-yellow-500">
+      <Card className="w-full max-w-md bg-green-700 text-white border-2 border-yellow-500 overflow-hidden">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Choose Number of Decks</CardTitle>
           <p className="text-sm text-green-200">Select the shoe configuration for this game</p>

@@ -51,7 +51,7 @@ export default function GameSummary({ stats, onNewGame, onMainMenu }: GameSummar
       animate={{ opacity: 1, scale: 1 }}
       className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
     >
-      <Card className="w-full max-w-2xl bg-green-700 text-white border-2 border-yellow-500">
+      <Card className="w-full max-w-2xl bg-green-700 text-white border-2 border-yellow-500 overflow-hidden">
         <CardHeader className="bg-green-800 text-center">
           <div className="flex items-center justify-center mb-2">
             <Trophy className="h-8 w-8 text-yellow-500 mr-2" />
