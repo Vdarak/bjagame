@@ -103,38 +103,40 @@ export default function GameOutcome({ outcome, onClose, displayMode = "modal" }:
     return (
       <AnimatePresence>
         {outcome.type && (
-          <motion.div
-            key={outcome.type} // Add key for re-animation on type change
-            initial={{ opacity: 0, y: 50, scale: 0.3 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              ...(outcome.type === "blackjack" && {
-                transition: {
-                  scale: {
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 10,
-                    repeat: 2,
-                    repeatType: "mirror",
+          <div className="fixed bottom-20 inset-x-0 flex justify-center pointer-events-none z-50">
+            <motion.div
+              key={outcome.type} // Add key for re-animation on type change
+              initial={{ opacity: 0, y: 50, scale: 0.3 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                ...(outcome.type === "blackjack" && {
+                  transition: {
+                    scale: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 10,
+                      repeat: 2,
+                      repeatType: "mirror",
+                    },
                   },
-                },
-              }),
-              ...(outcome.type === "dealer_blackjack" && {
-                x: [0, -5, 5, -5, 5, 0], // Subtle shake
-                transition: { x: { duration: 0.5 } },
-              }),
-            }}
-            exit={{ opacity: 0, y: 50, scale: 0.3 }}
-            className={`fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 p-3 rounded-lg shadow-xl text-white text-base font-semibold text-center flex items-center justify-center ${getBgColor()} ${
-              outcome.type === "blackjack" || outcome.type === "dealer_blackjack"
-                ? "px-5 py-3 text-lg border-2 border-white/50" // Larger and bordered for blackjacks
-                : "text-sm"
-            }`}
-          >
-            {outcome.message}
-          </motion.div>
+                }),
+                ...(outcome.type === "dealer_blackjack" && {
+                  x: [0, -5, 5, -5, 5, 0], // Subtle shake
+                  transition: { x: { duration: 0.5 } },
+                }),
+              }}
+              exit={{ opacity: 0, y: 50, scale: 0.3 }}
+              className={`pointer-events-auto p-3 rounded-lg shadow-xl text-white text-base font-semibold text-center flex items-center justify-center ${getBgColor()} ${
+                outcome.type === "blackjack" || outcome.type === "dealer_blackjack"
+                  ? "px-5 py-3 text-lg border-2 border-white/50" // Larger and bordered for blackjacks
+                  : "px-4 py-2 text-sm"
+              }`}
+            >
+              {outcome.message}
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     )
